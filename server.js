@@ -15,8 +15,8 @@ app.post('/api/text', (req, res) => {
     res.json({ reply: `Empfangen: ${text}` });
 });
 
-app.get('/check', (req, res) => {
-    res.send('Backend-Server läuft!');
+app.get('/api/status', (req, res) => {
+    res.json({ status: 'Server läuft' });
 });
 
 app.listen(port, () => console.log(`Server läuft auf Port ${port}`));
